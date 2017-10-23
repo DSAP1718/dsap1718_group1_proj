@@ -4,12 +4,12 @@ This project is designed to create a spectrogram using Fast Fourier Transform. T
 
 # Instructions
 
-####1.) MATLAB GUI
+#### 1.) MATLAB GUI
 -Run the SpectrogramMain.m then it will show the interface of recording an audio.
 -Enter desired amount of time that MATLAB will record the voice.
 -Click the yes button when another window shows to export in Excel the sample values to Raw Data Sheet.
 
-####2.) Excel GUI
+#### 2.) Excel GUI
 -Run the Spectrogram.xlsm then the Raw Data Sheet will contain the sample values.
 -Click the Functions sheet that contains 4 buttons:
 -- Calculate Window
@@ -21,7 +21,7 @@ This project is designed to create a spectrogram using Fast Fourier Transform. T
 -- Window
 -- Overlap/Hop size
 
-####2.1) Buttons
+##### 2.1) Buttons
 -Calculate Window
 -- Click this button to print out values of the windows given the window in the parameter fields.
 -Calculate FFT of Windows
@@ -31,7 +31,7 @@ This project is designed to create a spectrogram using Fast Fourier Transform. T
 -Spectrogram
 -- Click this button to compute for the magnitude of each window and the grayscaled values of each window. This will also print the greyscaled values to sheet 3 for Matlab importation.
 
-####2.2) Parameters
+##### 2.2) Parameters
 -FFT Size
 -- Type the size of radix that it will perform.
 -Window
@@ -39,7 +39,7 @@ This project is designed to create a spectrogram using Fast Fourier Transform. T
 -Overlap/Hop size
 -- Type the hop size for each window, also determined the overlap of each window.
 
-####3.) MATLAB
+#### 3.) MATLAB
 -Run the generateSpec.m to create a .bmp file of the values from the excel.
 
 # Future Update
