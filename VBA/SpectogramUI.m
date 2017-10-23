@@ -22,7 +22,7 @@ function varargout = SpectogramUI(varargin)
 
 % Edit the above text to modify the response to help SpectogramUI
 
-% Last Modified by GUIDE v2.5 20-Oct-2017 00:17:32
+% Last Modified by GUIDE v2.5 21-Oct-2017 10:00:09
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -93,8 +93,11 @@ function yes_Callback(hObject, eventdata, handles)
     ExcelApp.Run('clearCells',length(y));
     
     ExcelApp.Quit;
-    ExcelApp.release;    
-    
+    ExcelApp.release;
+    close(SpectogramUI);
+    ExportMessage;
+    pause(2);
+    SpectogramUI;
     disp('Done exporting values to excel');
 
 % --- Executes on button press in no.
@@ -127,3 +130,13 @@ myRecording = getaudiodata(recObj);
     totalSample = totalSample';
     %save('Spectrogram_Matlab_Variables');
     plot(y);
+
+
+% --- Executes on button press in generate.
+function generate_Callback(hObject, eventdata, handles)
+% hObject    handle to generate (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+writeimage = xlsread('Spectrogram.xlsm','Spectrogram');
+imwrite(writeimage,'spectrogram_out_excel.bmp','bmp');
+disp('Done generating spectrogram');
