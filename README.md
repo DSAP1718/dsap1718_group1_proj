@@ -1,6 +1,6 @@
 # Speech Analytics Using Spectrogram Excel-GUI Analyzer
 
-This project is designed to creates a spectrogram from an recorded audio from Matlab and then the Excel will compute the window function given the parameters of window length and hop size, Fast Fourier Transform with the parameters of the FFT size, and lastly to compute the spectrogram of the samples. Finally, exporting the data back to Matlab and generate a .bmp file of the grayscaled image.
+This project is designed to create a spectrogram using Fast Fourier Transform. The audio is recorded using MATLAB then the sample values will be computed by Fast Fourier Transform using Excel. In calculating the FFT, compute the window function given the parameters of window length and hop size, FFT with the parameters of the FFT size, and grayscale values for spectrogram. The output will be a .bmp file of the grayscale image.
 
 # Instructions
 
